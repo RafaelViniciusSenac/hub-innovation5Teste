@@ -1,12 +1,16 @@
 import { GetUserPasswords } from "@/app/controller/userController";
+import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from "react";
 
-export default function UserData({ id }) {
+
+export default function UserData() {
     const [userData, setUserData] = useState([]);
+    const searchParams = useSearchParams();
+    const idUsuario = Number(searchParams.get('id'));
 
     useEffect(() => {
         async function GetUserData() {
-            const dados = await GetUserPasswords(id);
+            const dados = await GetUserPasswords(idUsuario);
             console.log(dados);
 
             setUserData(dados);
