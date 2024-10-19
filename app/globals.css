@@ -13,6 +13,14 @@
     --foreground: #ededed;
   }
 }
+
+body {
+  background: url("./assets/wp6469979-minimalist-cat-desktop-wallpapers.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: relative;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
