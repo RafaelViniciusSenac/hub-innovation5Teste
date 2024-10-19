@@ -40,6 +40,16 @@
         "titulo": "twitch",
         "usuario": "twitch@twitch.com",
         "senha": "123"
+      },
+      {
+        "titulo": "servidor",
+        "usuario": "servidor@servidor.com",
+        "senha": "123"
+      },
+      {
+        "titulo": "novoTeste",
+        "usuario": "teste@teste.com",
+        "senha": "123"
       }
     ]
   }
