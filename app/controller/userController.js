@@ -21,8 +21,7 @@ export async function GetUserPasswords(id) {
             body: JSON.stringify({id}),
         });
         const dados = await response.json()
-        console.log(dados)
-        return dados;
+        return dados.data.passwords;
     } catch (error) {
         console.error('Erro ao adicionar usuário:', error);
     }
