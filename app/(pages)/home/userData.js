@@ -11,15 +11,13 @@ export default function UserData() {
     useEffect(() => {
         async function GetUserData() {
             const dados = await GetUserPasswords(idUsuario);
-            console.log(dados);
-
             setUserData(dados);
         }
 
-        if (id) {
+        if (idUsuario) {
             GetUserData();
         }
-    }, [id]);
+    }, [idUsuario]);
 
     return (
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
