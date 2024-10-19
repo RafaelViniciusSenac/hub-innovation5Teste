@@ -14,3 +14,16 @@ export async function GetUserPasswords(id) {
     }
     
 }
+
+export async function DeletePassword(userId,passwordId){
+    const response = await fetch('/api/rotas/users', {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userId, passwordId }),
+    });
+
+    const result = await response.json();
+    return result
+}

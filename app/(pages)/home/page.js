@@ -1,5 +1,5 @@
 "use client"
-import { GetUserPasswords } from '@/app/controller/userController';
+import { DeletePassword, GetUserPasswords } from '@/app/controller/userController';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -7,16 +7,26 @@ import { useEffect, useState } from 'react';
 export default function Home() {
     const [userData, setUserData] = useState([]);
     const router = useRouter()
+
     async function GetUserData() {
         const dados = await GetUserPasswords(Number(localStorage.getItem("userId")));
         setUserData(dados);
     }
 
+    async function handleDelete(passwordId){
+        const resposta = await DeletePassword(Number(localStorage.getItem("userId")), passwordId)
+
+        if(resposta.status){
+            await GetUserData()
+        }else{
+            alert(resposta.message)
+        }
+    }
+    
     useEffect(() => {
         GetUserData()
     }, []);
 
-    
     return (
         <div className="max-w-7xl mx-auto">
             <div className="flex flex-col justify-center items-center ">
@@ -33,7 +43,7 @@ export default function Home() {
                             <p className="text-gray-600 mb-1">Usuário: {item.usuario}</p>
                             <p className="text-gray-600 mb-4">Senha: {item.senha}</p>
                             <div className="flex gap-2 justify-end">
-                                <button className="bg-red-500 text-white px-4 py-2 rounded">
+                                <button onClick={() => handleDelete(item.id)} className="bg-red-500 text-white px-4 py-2 rounded">
                                     Excluir
                                 </button>
                             </div>
@@ -41,9 +51,6 @@ export default function Home() {
                     ))}
                 </div>
             </div>
-            {/* <Suspense fallback={<p>Carregando...</p>}>
-                <UserData/>
-            </Suspense> */}
         </div>
     );
 }

@@ -3,54 +3,6 @@
     "usuario": "admin",
     "senha": "admin",
     "id": 1,
-    "passwords": [
-      {
-        "titulo": "FACEBOOK",
-        "usuario": "face@teste.com",
-        "senha": "123"
-      },
-      {
-        "titulo": "INSTAGRAM",
-        "usuario": "teste@teste.com",
-        "senha": "123"
-      },
-      {
-        "titulo": "teste",
-        "usuario": "rafael",
-        "senha": "123"
-      },
-      {
-        "titulo": "TWITCH",
-        "usuario": "rafael.goncalves@ms.senac.br",
-        "senha": "123"
-      },
-      {
-        "titulo": "novo",
-        "usuario": "teste2",
-        "senha": "teste2"
-      }
-    ]
-  },
-  {
-    "usuario": "teste",
-    "senha": "teste",
-    "id": 2,
-    "passwords": [
-      {
-        "titulo": "twitch",
-        "usuario": "twitch@twitch.com",
-        "senha": "123"
-      },
-      {
-        "titulo": "servidor",
-        "usuario": "servidor@servidor.com",
-        "senha": "123"
-      },
-      {
-        "titulo": "novoTeste",
-        "usuario": "teste@teste.com",
-        "senha": "123"
-      }
-    ]
+    "passwords": []
   }
 ]
