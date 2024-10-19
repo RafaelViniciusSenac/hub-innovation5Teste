@@ -4,21 +4,21 @@ import { useState } from "react";
 import { VerificaLogin } from "./controller/loginController";
 
 export default function Login() {
-  const [usuario, setUsuario] = useState([])
-  const [senha, setSenha] = useState([])
-  const router = useRouter()
+    const [usuario, setUsuario] = useState([])
+    const [senha, setSenha] = useState([])
+    const router = useRouter()
 
-  async function handleSubmit(event) {
-    event.preventDefault()
-    const response = await VerificaLogin(usuario,senha)
-    console.log(response)
-    if(response){
-        router.push(`/home?id=${response.userId}`)
+    async function handleSubmit(event) {
+        event.preventDefault()
+        const response = await VerificaLogin(usuario, senha)
+        console.log(response)
+        if (response) {
+            router.push(`/home`)
+        }
     }
-}
-  return (
-    <>
-    <div className="flex items-center justify-center w-full h-screen">
+    return (
+        <>
+            <div className="flex items-center justify-center w-full h-screen">
                 <div className="w-80 bg-slate-600 p-6 rounded-lg shadow-md">
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div className="form-control">
@@ -47,6 +47,6 @@ export default function Login() {
                     </form>
                 </div>
             </div>
-    </>
-  );
+        </>
+    );
 }

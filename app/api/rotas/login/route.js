@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readJsonFile, writeJsonFile } from '../jsonUtils';
+import { readJsonFile, writeJsonFile } from '../../jsonUtils';
 
 export async function POST(req) {
     const newUser = await req.json();

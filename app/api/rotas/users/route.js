@@ -1,7 +1,7 @@
 // import fs from 'fs';
 import { NextResponse } from 'next/server';
 
-import { readJsonFile } from '../jsonUtils';
+import { readJsonFile } from '../../jsonUtils';
 // export async function GET() {
 //     const data = await readJsonFile();
 //     return NextResponse.json(data);
