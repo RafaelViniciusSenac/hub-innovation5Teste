@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { VerificaLogin } from "./controller/loginController";
 
-export default function Home() {
+export default function Login() {
   const [usuario, setUsuario] = useState([])
   const [senha, setSenha] = useState([])
   const router = useRouter()
@@ -11,8 +11,9 @@ export default function Home() {
   async function handleSubmit(event) {
     event.preventDefault()
     const response = await VerificaLogin(usuario,senha)
+    console.log(response)
     if(response){
-        router.push("/home")
+        router.push(`/home?id=${response.userId}`)
     }
 }
   return (

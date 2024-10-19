@@ -3,6 +3,23 @@
     "usuario": "admin",
     "senha": "admin",
     "id": 1,
+    "passwords": [
+      {
+        "titulo": "FACEBOOK",
+        "usuario": "teste@teste.com",
+        "senha": "123"
+      },
+      {
+        "titulo": "INSTAGRAM",
+        "usuario": "teste@teste.com",
+        "senha": "123"
+      }
+    ]
+  },
+  {
+    "usuario": "teste",
+    "senha": "teste",
+    "id": 2,
     "passwords": []
   }
 ]

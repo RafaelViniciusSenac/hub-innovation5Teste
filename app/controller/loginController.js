@@ -7,7 +7,8 @@ export async function VerificaLogin(usuario,senha) {
             },
             body: JSON.stringify({ usuario, senha }),
         });
-        return response.status;
+        const dados = await response.json()
+        return dados
     } catch (error) {
         console.error('Erro ao adicionar usuário:', error);
     }

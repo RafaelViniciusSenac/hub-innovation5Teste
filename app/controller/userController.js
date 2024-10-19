@@ -11,16 +11,18 @@ export async function GetAllUsers(){
     }
 }
 
-export async function AddUsers(name,password) {
+export async function GetUserPasswords(id) {
     try {
         const response = await fetch('/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, password }),
+            body: JSON.stringify({id}),
         });
-        return response;
+        const dados = await response.json()
+        console.log(dados)
+        return dados;
     } catch (error) {
         console.error('Erro ao adicionar usuário:', error);
     }

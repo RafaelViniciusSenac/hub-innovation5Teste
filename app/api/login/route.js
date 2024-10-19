@@ -13,6 +13,6 @@ export async function POST(req) {
         newUser.passwords = []
         data.push(newUser);
         await writeJsonFile(data);
-        return NextResponse.json({ message: 'User added successfully', data: newUser });
+        return NextResponse.json({ message: 'User added successfully', userId: newUser.id });
     }
 }
