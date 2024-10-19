@@ -1,6 +1,6 @@
 "use client"
-import { Suspense } from 'react';
-import UserData from './userData';
+// import { Suspense } from 'react';
+// import UserData from './userData';
 
 
 export default function Home() {
@@ -10,9 +10,9 @@ export default function Home() {
                 <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center">Bem-vindo</h1>
                 <button className="bg-blue-600 text-white w-56 py-1 rounded-lg mb-6">Nova Senha</button>
             </div>
-            <Suspense fallback={<p>Carregando...</p>}>
+            {/* <Suspense fallback={<p>Carregando...</p>}>
                 <UserData/>
-            </Suspense>
+            </Suspense> */}
         </div>
     );
 }
