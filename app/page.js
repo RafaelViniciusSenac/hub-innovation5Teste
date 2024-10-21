@@ -25,7 +25,7 @@ export default function Login() {
                             <label className="block text-white mb-1">Usuário</label>
                             <input
                                 type="text"
-                                placeholder="Digite o usuário"
+                                placeholder="Digite o usuário teste"
                                 className="w-full px-3 py-2 bg-gray-200 rounded  "
                                 onChange={(e) => setUsuario(e.target.value)}
                             />
